@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 | 品牌视觉升级</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-wrap">
+            <a href="index.html" class="logo gradient-text">Designer</a>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="works.html" class="nav-link">作品</a></li>
+                <li><a href="about.html" class="nav-link">关于我</a></li>
+                <li><a href="contact.html" class="nav-link">联系我</a></li>
+            </ul>
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">首页</a></li>
+                    <li><a href="works.html" class="mobile-nav-link">作品</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">关于我</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">联系我</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 作品头部 -->
+    <section class="section" style="margin-top: 4rem;">
+        <div class="container">
+            <div class="section-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">作品详情</span>
+            </div>
+            <h1 class="h1">品牌视觉<span class="gradient-text gradient-underline">升级设计</span></h1>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0;">
+                <span class="badge-text" style="border:1px solid var(--accent); padding:0.3rem 0.8rem; border-radius: 999px;">品牌设计</span>
+                <span class="badge-text" style="border:1px solid var(--accent); padding:0.3rem 0.8rem; border-radius: 999px;">2025</span>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <img src="https://picsum.photos/id/1/1200/700" alt="作品主图" onclick="openViewer(this.src)" style="border-radius: var(--radius-xl); cursor: pointer;">
+            </div>
+
+            <div class="grid-2">
+                <div>
+                    <h3 class="h3">项目概述</h3>
+                    <p class="text-base">
+                        本次项目为线下实体品牌进行全维度视觉升级，原品牌视觉老旧、识别性弱。
+                        设计采用现代极简风格，统一色彩体系、字体规范与视觉符号，提升品牌整体质感与市场辨识度。
+                    </p>
+                    <p class="text-base" style="margin-top: 1rem;">
+                        设计难点在于平衡品牌原有基因与全新视觉风格，在传承与创新之间找到平衡点。
+                    </p>
+
+                    <h3 class="h3" style="margin-top: 2rem;">使用工具</h3>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                        <span class="badge-text" style="border:1px solid var(--border); padding:0.3rem 0.8rem; border-radius: 999px;">Photoshop</span>
+                        <span class="badge-text" style="border:1px solid var(--border); padding:0.3rem 0.8rem; border-radius: 999px;">Illustrator</span>
+                        <span class="badge-text" style="border:1px solid var(--border); padding:0.3rem 0.8rem; border-radius: 999px;">Figma</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="h3">设计流程</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-time">前期调研</div>
+                        <div>
+                            <h4 class="h4">市场&用户分析</h4>
+                            <p class="text-base">调研同类品牌风格，梳理用户审美偏好，确定设计方向。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">草图方案</div>
+                        <div>
+                            <h4 class="h4">多版草图绘制</h4>
+                            <p class="text-base">输出多版视觉草图，筛选最优方案进行细化。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">视觉落地</div>
+                        <div>
+                            <h4 class="h4">完整视觉输出</h4>
+                            <p class="text-base">色彩、字体、图形组合落地，输出全套设计文件。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">优化验收</div>
+                        <div>
+                            <h4 class="h4">细节调整</h4>
+                            <p class="text-base">根据反馈迭代细节，最终完成项目交付。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关作品 -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="h2">相关<span class="gradient-text">作品</span></h2>
+            <div class="grid-3" style="margin-top: 2rem;">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/2/600/400" alt="界面设计" onclick="openViewer(this.src)">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h3">APP界面设计</h3>
+                        <a href="work-detail.html" style="color: var(--accent);">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/3/600/400" alt="海报设计" onclick="openViewer(this.src)">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h3">创意海报</h3>
+                        <a href="work-detail.html" style="color: var(--accent);">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/4/600/400" alt="包装设计" onclick="openViewer(this.src)">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h3">产品包装</h3>
+                        <a href="work-detail.html" style="color: var(--accent);">查看详情 →</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="works.html" class="btn btn-primary">返回全部作品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p class="logo gradient-text">Designer Portfolio</p>
+            <p class="footer-text" style="margin-top: 0.5rem;">© 2026 设计师作品集 版权所有</p>
+        </div>
+    </footer>
+
+    <!-- 图片预览弹窗 -->
+    <div class="image-viewer" id="imageViewer">
+        <span class="viewer-close" onclick="closeViewer()">&times;</span>
+        <img src="" alt="大图预览" class="viewer-img" id="viewerImg">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 移动端菜单
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mobileMenu.classList.toggle('active');
+            });
+            document.addEventListener('click', () => mobileMenu.classList.remove('active'));
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+            });
+
+            // 图片预览
+            const imageViewer = document.getElementById('imageViewer');
+            const viewerImg = document.getElementById('viewerImg');
+            const viewerClose = document.querySelector('.viewer-close');
+            window.openViewer = function(imgSrc) {
+                viewerImg.src = imgSrc;
+                imageViewer.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+            window.closeViewer = function() {
+                imageViewer.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+            viewerClose.addEventListener('click', closeViewer);
+            imageViewer.addEventListener('click', (e) => {
+                if(e.target === imageViewer) closeViewer();
+            });
+            document.addEventListener('keydown', e => {
+                if(e.key === 'Escape' && imageViewer.classList.contains('active')) closeViewer();
+            });
+
+            // 导航高亮
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            navLinks.forEach(link => {
+                if(link.getAttribute('href') === currentPage) {
+                    link.style.color = 'var(--accent)';
+                    link.style.borderBottom = '2px solid var(--accent)';
+                }
+            });
+
+            // 滚动动画
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.utils.toArray('.card, .grid-2 > div').forEach(el => {
+                gsap.from(el, {
+                    opacity: 0,
+                    y: 28,
+                    duration: 0.7,
+                    ease: "power2.out",
+                    scrollTrigger: { trigger: el, start: "top 85%", once: true }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

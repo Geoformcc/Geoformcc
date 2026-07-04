@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设计师作品集 | 首页</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-wrap">
+            <a href="index.html" class="logo gradient-text">Designer</a>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="works.html" class="nav-link">作品</a></li>
+                <li><a href="about.html" class="nav-link">关于我</a></li>
+                <li><a href="contact.html" class="nav-link">联系我</a></li>
+            </ul>
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">首页</a></li>
+                    <li><a href="works.html" class="mobile-nav-link">作品</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">关于我</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">联系我</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 头部 -->
+    <section class="section" style="margin-top: 4rem;">
+        <div class="container grid-2">
+            <div class="hero-text">
+                <div class="section-badge">
+                    <span class="badge-dot pulse"></span>
+                    <span class="badge-text">个人作品集</span>
+                </div>
+                <h1 class="h1">
+                    创意视觉<br>
+                    <span class="gradient-text gradient-underline">设计创作者</span>
+                </h1>
+                <p class="text-lg text-base" style="margin: 1.5rem 0 2.5rem;">
+                    专注品牌视觉、界面设计、创意海报与IP形象设计，用极简美学打造有温度、有张力的视觉作品。
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="works.html" class="btn btn-primary">
+                        浏览全部作品 <i class="fa fa-arrow-right"></i>
+                    </a>
+                    <a href="about.html" class="btn btn-outline">了解更多</a>
+                </div>
+            </div>
+            <div class="hero-img" style="animation: float 5s ease-in-out infinite;">
+                <img src="https://picsum.photos/id/26/700/600" alt="设计展示图">
+            </div>
+        </div>
+    </section>
+
+    <!-- 精选作品 -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">精选项目</span>
+            </div>
+            <h2 class="h2" style="margin-bottom: 2rem;">代表<span class="gradient-text">作品</span></h2>
+            <div class="grid-3">
+                <div class="card-featured">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/id/1/600/400" alt="品牌设计" onclick="openViewer(this.src)">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h3">品牌视觉升级</h3>
+                            <p class="text-base">为实体品牌重塑视觉体系，强化品牌识别与质感。</p>
+                            <a href="work-detail.html" class="btn btn-outline" style="margin-top: 1rem; width: 100%;">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/2/600/400" alt="APP界面" onclick="openViewer(this.src)">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h3">移动端界面设计</h3>
+                        <p class="text-base">极简风格APP界面，平衡美学与用户体验。</p>
+                        <a href="work-detail.html" class="btn btn-outline" style="margin-top: 1rem; width: 100%;">查看详情</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/3/600/400" alt="海报设计" onclick="openViewer(this.src)">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h3">创意海报系列</h3>
+                        <p class="text-base">潮流视觉语言，打造活动宣传视觉方案。</p>
+                        <a href="work-detail.html" class="btn btn-outline" style="margin-top: 1rem; width: 100%;">查看详情</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="works.html" class="btn btn-primary">查看全部作品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人简介 -->
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <img src="https://picsum.photos/id/96/700/500" alt="设计师形象">
+            </div>
+            <div>
+                <div class="section-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">关于我</span>
+                </div>
+                <h2 class="h2">热爱设计，<span class="gradient-text">专注细节</span></h2>
+                <p class="text-base" style="margin: 1rem 0;">
+                    深耕视觉设计领域多年，擅长从品牌需求出发，结合现代极简风格完成创意落地。
+                    坚持「克制布局，大胆细节」的设计理念，让每一份作品都兼具美感与实用性。
+                </p>
+                <a href="about.html" class="btn btn-primary" style="margin-top: 1rem;">查看完整经历</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作CTA -->
+    <section class="section section-dark">
+        <div class="container" style="text-align: center;">
+            <h2 class="h2">期待与你<span class="gradient-text">合作</span></h2>
+            <p class="text-lg" style="margin: 1rem auto 2rem; max-width: 600px;">
+                无论是项目合作、设计咨询还是交流学习，欢迎随时联系我。
+            </p>
+            <a href="contact.html" class="btn btn-primary">立即联系</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p class="logo gradient-text">Designer Portfolio</p>
+            <p class="footer-text" style="margin-top: 0.5rem;">© 2026 设计师作品集 版权所有</p>
+        </div>
+    </footer>
+
+    <!-- 图片预览弹窗 -->
+    <div class="image-viewer" id="imageViewer">
+        <span class="viewer-close" onclick="closeViewer()">&times;</span>
+        <img src="" alt="大图预览" class="viewer-img" id="viewerImg">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 移动端菜单
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mobileMenu.classList.toggle('active');
+            });
+            document.addEventListener('click', () => mobileMenu.classList.remove('active'));
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+            });
+
+            // 图片预览
+            const imageViewer = document.getElementById('imageViewer');
+            const viewerImg = document.getElementById('viewerImg');
+            const viewerClose = document.querySelector('.viewer-close');
+            window.openViewer = function(imgSrc) {
+                viewerImg.src = imgSrc;
+                imageViewer.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+            window.closeViewer = function() {
+                imageViewer.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+            viewerClose.addEventListener('click', closeViewer);
+            imageViewer.addEventListener('click', (e) => {
+                if(e.target === imageViewer) closeViewer();
+            });
+            document.addEventListener('keydown', e => {
+                if(e.key === 'Escape' && imageViewer.classList.contains('active')) closeViewer();
+            });
+
+            // 导航栏高亮
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            navLinks.forEach(link => {
+                if(link.getAttribute('href') === currentPage) {
+                    link.style.color = 'var(--accent)';
+                    link.style.borderBottom = '2px solid var(--accent)';
+                }
+            });
+
+            // 滚动入场动画
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.utils.toArray('.card, .grid-2 > div').forEach(el => {
+                gsap.from(el, {
+                    opacity: 0,
+                    y: 28,
+                    duration: 0.7,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        once: true
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
